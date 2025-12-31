@@ -1,0 +1,15 @@
+<div class="student-view" *ngIf="student">
+  <h2>Student Details</h2>
+  <p><strong>Name:</strong> {{ student.studentName }}</p>
+  <p><strong>DOB:</strong> {{ student.studentDob }}</p>
+  <p><strong>City:</strong> {{ student.studentCity }}</p>
+  <p><strong>Country:</strong> {{ student.studentCountry }}</p>
+  <p><strong>Mobile:</strong> {{ student.studentMobile }}</p>
+  <p><strong>Email:</strong> {{ student.studentEmail }}</p>
+  <p><strong>Course:</strong> {{ student.studentCourse }}</p>
+  <p><strong>Duration:</strong> {{ student.studentCourseDuration }}</p>
+  <div class="actions">
+    <button (click)="back()">Back</button>
+  </div>
+</div>
+<div *ngIf="!student">Student not found.</div>

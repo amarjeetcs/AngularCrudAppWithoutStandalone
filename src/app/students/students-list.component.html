@@ -1,0 +1,33 @@
+<div class="students-page">
+  <h2>Students</h2>
+  <div class="controls">
+    <button (click)="add()">Add Student</button>
+  </div>
+
+  <table class="students-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>City</th>
+        <th>Mobile</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of students">
+        <td>{{ s.studentName }}</td>
+        <td>{{ s.studentCourse }} ({{ s.studentCourseDuration }})</td>
+        <td>{{ s.studentCity }}, {{ s.studentCountry }}</td>
+        <td>{{ s.studentMobile }}</td>
+        <td>
+          <button (click)="view(s.id)">View</button>
+          <button (click)="edit(s.id)">Update</button>
+          <button (click)="remove(s.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="students.length === 0">No students registered yet.</p>
+</div>

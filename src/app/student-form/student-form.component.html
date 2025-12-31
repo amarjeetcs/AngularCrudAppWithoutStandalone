@@ -1,0 +1,48 @@
+<div class="student-form">
+  <h2>{{ editingId ? 'Update' : 'Register' }} Student</h2>
+
+  <div>
+    <label>Name</label>
+    <input [(ngModel)]="model.studentName" />
+  </div>
+
+  <div>
+    <label>DOB</label>
+    <input type="date" [(ngModel)]="model.studentDob" />
+  </div>
+
+  <div>
+    <label>City</label>
+    <input [(ngModel)]="model.studentCity" />
+  </div>
+
+  <div>
+    <label>Country</label>
+    <input [(ngModel)]="model.studentCountry" />
+  </div>
+
+  <div>
+    <label>Mobile</label>
+    <input [(ngModel)]="model.studentMobile" />
+  </div>
+
+  <div>
+    <label>Email</label>
+    <input [(ngModel)]="model.studentEmail" />
+  </div>
+
+  <div>
+    <label>Course</label>
+    <input [(ngModel)]="model.studentCourse" />
+  </div>
+
+  <div>
+    <label>Course Duration</label>
+    <input [(ngModel)]="model.studentCourseDuration" />
+  </div>
+
+  <div class="actions">
+    <button (click)="save()">{{ editingId ? 'Update' : 'Add' }}</button>
+    <button (click)="cancel()">Cancel</button>
+  </div>
+</div>
